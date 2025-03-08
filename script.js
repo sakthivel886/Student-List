@@ -4,9 +4,10 @@ let data = [
     {id: 2, name:"vaishu", age:"20", gender:"Female", course: "JavaScript", email: "sakthivel0210@gmail.com"}
 ]
 
-var datas = localStorage.getItem('object')
-var objectDatas = JSON.parse(datas)
-data = objectDatas
+// localStorage.setItem("object", JSON.stringify(data))
+// var datas = localStorage.getItem('object')
+// var objectDatas = JSON.parse(datas)
+// data = objectDatas
 
 
 var ids = data.length
@@ -39,6 +40,8 @@ function readAll() {
     ))
 
     tableData.innerHTML = elements
+
+    
 }
 
 function delet(id) {
