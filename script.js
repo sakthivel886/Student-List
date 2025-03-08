@@ -1,13 +1,13 @@
 
-let data = [
-    {id: 1, name:"vaishu", age:"20", gender:"Female", course: "JavaScript", email: "sakthivel0210@gmail.com"},
-    {id: 2, name:"vaishu", age:"20", gender:"Female", course: "JavaScript", email: "sakthivel0210@gmail.com"}
-]
+var data 
 
-// localStorage.setItem("object", JSON.stringify(data))
-// var datas = localStorage.getItem('object')
-// var objectDatas = JSON.parse(datas)
-// data = objectDatas
+if (localStorage.getItem("object") == null) {
+    data = []
+}
+else {
+    data = JSON.parse(localStorage.getItem("object"))
+}
+
 
 
 var ids = data.length
@@ -19,7 +19,7 @@ else {
 }
 
 function readAll() {
-
+    
     localStorage.setItem("object", JSON.stringify(data))
     var tableData = document.querySelector(".container-two__table")
 
